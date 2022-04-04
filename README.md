@@ -38,4 +38,5 @@ yarn build
 
 1. eslint insatll & setting
 2. 多國語系
-3.
+3. Dark mode swtich
+4.
