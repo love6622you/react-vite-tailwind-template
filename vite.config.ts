@@ -10,19 +10,19 @@ export default defineConfig({
       output: {
         chunkFileNames: "static/js/[name]-[hash].js",
         entryFileNames: "static/js/[name]-[hash].js",
-        assetFileNames: "static/[ext]/[name]-[hash].[ext]",
-      },
-    },
+        assetFileNames: "static/[ext]/[name]-[hash].[ext]"
+      }
+    }
   },
   resolve: {
     alias: {
-      "@": resolve(__dirname, "src"), // 設置 '@' 指向 'src' 目錄
-    },
+      "@": resolve(__dirname, "src") // 設置 '@' 指向 'src' 目錄
+    }
   },
   server: {
     port: 8010,
     open: false,
-    cors: true,
+    cors: true
     // proxy: {
     //   '/api': {
     //     target: 'http://xxx.xxx.xxx.xxx:8000',
@@ -31,5 +31,5 @@ export default defineConfig({
     //     rewrite: (path) => path.replace('/api/', '/')
     //   }
     // }
-  },
+  }
 });
