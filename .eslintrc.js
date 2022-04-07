@@ -19,7 +19,8 @@ module.exports = {
     },
     ecmaVersion: "latest",
     sourceType: "module",
-    project: "./tsconfig.json"
+    project: "./tsconfig.json",
+    tsconfigRootDir: __dirname
   },
   plugins: ["react", "@typescript-eslint", "prettier"],
   rules: {
@@ -28,6 +29,9 @@ module.exports = {
     "@typescript-eslint/no-shadow": "off",
     "@typescript-eslint/camelcase": "off",
     "@typescript-eslint/no-explicit-any": ["off"],
+    "@typescript-eslint/no-use-before-define": "off", // 視情況打開
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-unused-expressions": "off",
     "react/react-in-jsx-scope": ["off"],
     "react/jsx-one-expression-per-line": "off",
     "import/no-extraneous-dependencies": ["error", { devDependencies: true }],
