@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import poweredBy from "./powered-by-vitawind-dark.png";
 
 function App() {
+  console.log(import.meta.env);
   const [count, setCount] = useState(0);
 
   return (
