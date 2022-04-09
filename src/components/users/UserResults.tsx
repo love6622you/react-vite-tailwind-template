@@ -1,26 +1,22 @@
 import { useEffect } from "react";
 import PropTypes from "prop-types";
-import request from "../../lib/request";
+import { github } from "@/lib/api";
 
-function UserResults(props) {
+function UserResults({ user: { login, avatar_url } }) {
   useEffect(() => {
     fetchUsers();
   }, []);
 
   const fetchUsers = async () => {
-    // const respnose = await fetch(`${process.env.REACT_APP_GITHUB_URL}/users`);
-    // console.log(respnose);
-    request({
-      url: "users",
-      method: "GET"
-    }).then((val) => {
-      console.log(val);
-    });
+    const params = {};
+    github.searchUsers(params);
   };
 
-  return <div>UserResults</div>;
+  return <div>UserResults {avatar_url}</div>;
 }
 
-UserResults.propTypes = {};
+UserResults.propTypes = {
+  user: PropTypes.object.isRequired
+};
 
 export default UserResults;

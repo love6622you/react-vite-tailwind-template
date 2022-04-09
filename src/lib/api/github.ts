@@ -9,6 +9,6 @@ function searchUsers(params) {
   });
 }
 
-export default {
+export const github = {
   searchUsers
 };

@@ -5,10 +5,16 @@ module.exports = {
     jest: true,
     node: true
   },
+  settings: {
+    react: {
+      version: "detect"
+    }
+  },
   extends: [
-    "airbnb",
-    "airbnb-typescript",
-    "plugin:import/typescript",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended",
     "prettier",
     "plugin:prettier/recommended"
   ],
@@ -19,25 +25,17 @@ module.exports = {
     },
     ecmaVersion: "latest",
     sourceType: "module",
-    project: "./tsconfig.json",
     tsconfigRootDir: __dirname
   },
   plugins: ["react", "@typescript-eslint", "prettier"],
   rules: {
     quotes: ["error", "double"],
     "@typescript-eslint/quotes": ["error", "double"],
-    "@typescript-eslint/no-shadow": "off",
-    "@typescript-eslint/camelcase": "off",
-    "@typescript-eslint/no-explicit-any": ["off"],
-    "@typescript-eslint/no-use-before-define": "off", // 視情況打開
-    "@typescript-eslint/no-unused-vars": "off",
-    "@typescript-eslint/no-unused-expressions": "off",
-    "react/react-in-jsx-scope": ["off"],
-    "react/jsx-one-expression-per-line": "off",
-    "import/no-extraneous-dependencies": ["error", { devDependencies: true }],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "react/react-in-jsx-scope": "off",
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
-    "global-require": "off",
     "prettier/prettier": "error"
   }
 };

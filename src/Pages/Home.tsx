@@ -1,12 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import UserResults from "../components/users/UserResults";
+import UserResults from "@/components/users/UserResults";
 
 function Home(props) {
+  const user = {
+    login: true,
+    avatar_url: "123"
+  };
   return (
     <>
-      <UserResults />
-      <div />
+      <UserResults user={user} />
     </>
   );
 }
