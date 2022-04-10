@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import PropTypes from "prop-types";
-import { github } from "@/lib/api";
+import { github } from "@/api";
 
 function UserResults({ user: { login, avatar_url } }) {
   useEffect(() => {

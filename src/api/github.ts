@@ -1,4 +1,4 @@
-import request from "../request";
+import request from "../lib/request";
 
 // const baseUrl = "/api/v1";
 function searchUsers(params) {
